@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+
 import './App.css';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Navbar from './layout/Navbar';
+import Home from './pages/Home';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import AddBook from './books/AddBook';
+import EditBook from './books/EditBook';
+import ViewBook from './books/ViewBook';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+      <Navbar />
+        <Routes>
+          <Route exact path="/" element={<Home />}></Route>
+          <Route exact path="/addBook" element={<AddBook />}></Route>
+          <Route exact path="/editBook/:id" element={<EditBook />}></Route>
+          <Route exact path="/viewBook/:isbn" element={<ViewBook />}></Route>
+        </Routes>
+      </Router>
+      
+      
+      
     </div>
   );
 }

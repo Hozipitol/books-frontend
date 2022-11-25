@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.text1{
+  font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+.text2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.text3{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 800;
+
+}
+.text4 {
+  font-family: 'Courier New', Courier, monospace;
+}
